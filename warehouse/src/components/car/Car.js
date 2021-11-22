@@ -1,17 +1,18 @@
 import React from 'react';
-import './App.css';
-import Vehicle from '../vehicle/Vehicle'
+import Vehicle from '../vehicle/vehicle'
+
+import '../../index.css'
 
 const Car = (props) => {
-    const { cars: {  vehicles }, onClick} = props;
+
+    const { cars: { vehicles }, onClick} = props;
 
     const vehicleItems = vehicles.map((vehicle, i) => {
       return (
-    //    <div key={vehicle._id}>
-          <Vehicle vehicle = {vehicle}
-              index={i + 1}
-              onClick={onClick}/>
-   //     </div>
+        <Vehicle vehicle = {vehicle}
+          index={i + 1}
+          key={i}
+          onClick={onClick}/>
       );
     });
 
@@ -26,6 +27,8 @@ const Car = (props) => {
           <th scope="col">Price</th>
           <th scope="col">Licensed</th>
           <th scope="col">Date added</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
         </tr>
       </thead>
       )
@@ -38,12 +41,6 @@ const Car = (props) => {
       {vehicleItems}
       </tbody>
     </table>
-/*     <div className="car">
-      <div>{location}</div>
-      <div>
-      {vehicleItems}
-      </div>
-    </div> */
   )
 }
 

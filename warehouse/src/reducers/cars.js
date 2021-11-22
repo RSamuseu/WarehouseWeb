@@ -1,16 +1,15 @@
-import { ADD_PRODUCTS } from '../actiontypes'
+import { ADD_VEHICLES } from '../action-types/action-types'
 
 const initialState = {
-  products: []
+  vehicles: []
 }
 
-const cars = (state = initialState, action) => {
-  switch(action.type) {
-    case ADD_PRODUCTS:
-      const { products } = action;
+const cars = (state = initialState, { vehicles, type }) => {
+  switch(type) {
+    case ADD_VEHICLES:
       return {
         ...state,
-        products: products
+        vehicles: vehicles
       };
     default:
       return state;

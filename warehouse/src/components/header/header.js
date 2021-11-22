@@ -1,7 +1,9 @@
 import React from "react"
-import './App.css';
+
 import Cart from "./header-cart";
 import Name from './header-name'
+
+import './header.css'
 
 const Header = () => {
   return(

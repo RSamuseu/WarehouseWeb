@@ -1,8 +1,9 @@
 import React from 'react';
+import './location.css'
 
-function Location(props) {
-  const { lat, long } = props.location;
+function WarehouseLocation({location}) {
 
+  const { lat, long } = location
   return(
     <div className="location">
       <div className="lat">
@@ -17,4 +18,4 @@ function Location(props) {
   )
 }
 
-export default Location
+export default WarehouseLocation

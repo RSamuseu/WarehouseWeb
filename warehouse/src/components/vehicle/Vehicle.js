@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import * as actions from '../../action'
+import * as actions from '../../actions/action'
+
+import '../../index.css'
+import './vehicle.css'
 
 class Vehicle extends Component {
 
@@ -27,12 +30,12 @@ class Vehicle extends Component {
   }
 
   render() {
-    
     const { vehicle: { make, model, year_Model, price, licensed, date_Added }, index } = this.props;
     const { isInCart } = this.state;
     const btnDetailClasses = licensed ? "btn btn-success" : "btn btn-success disabled";
     const btnPrimaryClasses = isInCart ? "btn btn-primary disabled" : "btn btn-primary";
     const license = licensed ? "Yes" : "No";
+
     return(
      <tr>
       <td>{index}</td>

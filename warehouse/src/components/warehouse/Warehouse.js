@@ -1,22 +1,23 @@
 import React, { useState } from 'react'
-import Car from './Car';
-import Modal from './Modal'
-import CarDetails from './CatDetails'
+import Car from '../car/car';
+import Modal from '../modal/modal'
+import CarDetails from '../car-details/car-details'
 
-const Warehouse = (props) => {
+const Warehouse = ({ warehouse }) => {
   const [isDetailed, setDetailed] = useState(false);
 
   function setDetales() {
     setDetailed(current => !current)
   }
 
-  const { cars, name } = props.warehouse;
+  const { name, cars } = warehouse;
+
   return (
     <div>
       <h1>{name}</h1>
       <Car cars={cars} onClick={setDetales}/>
       <Modal active={isDetailed} setActive={setDetales}>
-        <CarDetails warehouse={props.warehouse}/>
+        <CarDetails warehouse={warehouse}/>
       </Modal>
     </div>
   )

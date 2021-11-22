@@ -1,14 +1,22 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import './app.css';
-import Warehouse from '../../Warehouse';
+
+import Warehouse from '../warehouse/warehouse';
 import Header from '../header/header';
 
+import './app.css';
+
 function App() {
-  const warehouses = useSelector((state) => state.cars.products);
-  const warehouseItems = warehouses.map((warehouse) => {
+
+  const warehouses = useSelector((state) => state.cars.vehicles);
+  const warehouseItems = !warehouses.length
+  ? <div>
+      <h1>{"All warehouses are empty!"}</h1>
+      <img src="pulp-fiction-john-travolta.gif" alt=""/>
+    </div>
+  :warehouses.map((warehouse, i) => {
     return (
-        <Warehouse warehouse = {warehouse} />
+        <Warehouse warehouse = {warehouse} key={i}/>
     );
   });
 
