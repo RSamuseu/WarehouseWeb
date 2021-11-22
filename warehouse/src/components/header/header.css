@@ -1,0 +1,90 @@
+.app-header {
+  background-color: #222;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 10px 20px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-name > h3 {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.header-name > img {
+  width: 50px;
+  height: 45px;
+  float: right;
+  margin-left: 5px;
+}
+
+.header-cart {
+  width: 70%;
+}
+
+.header-cart-icon {
+  float: right;
+  overflow: hidden;
+  margin-left: -50px;
+  cursor: pointer;
+}
+
+.header-cart-count {
+  width: 100%;
+}
+
+.header-cart-count > span {
+  float: right;
+}
+
+.dot {
+  height: 30px;
+  width: 30px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  font-size: large;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.total-price {
+  margin-top: 5px;
+  float: right;
+}
+
+.total-price > label, .total-price  > span {
+  padding: 3px;
+}
+
+.total-price > label {
+  font-weight: bold;
+}
+
+.added-cars {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.added-cars > div, .added-cars > div > span {
+  padding: 5px;
+}
+
+.cart-car {
+  width: 70%;
+}
+
+.cart-price {
+  width: 30%;
+}

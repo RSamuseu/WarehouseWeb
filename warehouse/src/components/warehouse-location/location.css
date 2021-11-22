@@ -1,0 +1,8 @@
+.lat > label, .long > label{
+  width: 50%;
+  font-weight: bold;
+}
+
+.long > span, .lat > span {
+  padding: 20px;
+}
